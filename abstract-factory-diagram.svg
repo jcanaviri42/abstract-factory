@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <!-- Background -->
+  <rect width="800" height="600" fill="#f8f9fa" />
+  
+  <!-- Title -->
+  <text x="400" y="40" font-family="Arial" font-size="24" font-weight="bold" text-anchor="middle">Abstract Factory Pattern: UI Theming System</text>
+  
+  <!-- Abstract Products -->
+  <rect x="50" y="100" width="180" height="80" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" rx="5" />
+  <text x="140" y="140" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle">«interface»</text>
+  <text x="140" y="160" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle">Button</text>
+  
+  <rect x="50" y="220" width="180" height="80" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" rx="5" />
+  <text x="140" y="260" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle">«interface»</text>
+  <text x="140" y="280" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle">TextField</text>
+  
+  <!-- Abstract Factory -->
+  <rect x="320" y="160" width="180" height="80" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2" rx="5" />
+  <text x="410" y="200" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle">«interface»</text>
+  <text x="410" y="220" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle">UIFactory</text>
+  
+  <!-- Concrete Factories -->
+  <rect x="250" y="350" width="150" height="60" fill="#c8e6c9" stroke="#2e7d32" stroke-width="2" rx="5" />
+  <text x="325" y="385" font-family="Arial" font-size="14" text-anchor="middle">LightThemeFactory</text>
+  
+  <rect x="420" y="350" width="150" height="60" fill="#c8e6c9" stroke="#2e7d32" stroke-width="2" rx="5" />
+  <text x="495" y="385" font-family="Arial" font-size="14" text-anchor="middle">DarkThemeFactory</text>
+  
+  <!-- Concrete Products -->
+  <rect x="50" y="350" width="120" height="60" fill="#bbdefb" stroke="#1565c0" stroke-width="2" rx="5" />
+  <text x="110" y="385" font-family="Arial" font-size="14" text-anchor="middle">LightButton</text>
+  
+  <rect x="50" y="430" width="120" height="60" fill="#bbdefb" stroke="#1565c0" stroke-width="2" rx="5" />
+  <text x="110" y="465" font-family="Arial" font-size="14" text-anchor="middle">LightTextField</text>
+  
+  <rect x="590" y="350" width="120" height="60" fill="#bbdefb" stroke="#1565c0" stroke-width="2" rx="5" />
+  <text x="650" y="385" font-family="Arial" font-size="14" text-anchor="middle">DarkButton</text>
+  
+  <rect x="590" y="430" width="120" height="60" fill="#bbdefb" stroke="#1565c0" stroke-width="2" rx="5" />
+  <text x="650" y="465" font-family="Arial" font-size="14" text-anchor="middle">DarkTextField</text>
+  
+  <!-- Client -->
+  <rect x="320" y="70" width="180" height="60" fill="#fff3e0" stroke="#e65100" stroke-width="2" rx="5" />
+  <text x="410" y="105" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle">Application</text>
+  
+  <!-- Connections -->
+  <!-- Client to Abstract Factory -->
+  <line x1="410" y1="130" x2="410" y2="160" stroke="#e65100" stroke-width="2" />
+  <polygon points="410,160 405,150 415,150" fill="#e65100" />
+  
+  <!-- Abstract Factory to Abstract Products -->
+  <line x1="320" y1="200" x2="230" y2="140" stroke="#2e7d32" stroke-width="2" />
+  <polygon points="230,140 242,144 238,152" fill="#2e7d32" />
+  
+  <line x1="320" y1="200" x2="230" y2="260" stroke="#2e7d32" stroke-width="2" />
+  <polygon points="230,260 242,256 238,248" fill="#2e7d32" />
+  
+  <!-- Concrete Factories to Abstract Factory -->
+  <line x1="325" y1="350" x2="370" y2="240" stroke="#2e7d32" stroke-width="2" />
+  <polygon points="370,240 368,250 360,244" fill="#2e7d32" />
+  
+  <line x1="495" y1="350" x2="450" y2="240" stroke="#2e7d32" stroke-width="2" />
+  <polygon points="450,240 452,250 460,244" fill="#2e7d32" />
+  
+  <!-- Concrete Products to Abstract Products -->
+  <line x1="110" y1="350" x2="140" y2="300" stroke="#1565c0" stroke-width="2" />
+  <polygon points="140,300 136,310 144,310" fill="#1565c0" />
+  
+  <line x1="110" y1="430" x2="140" y2="300" stroke="#1565c0" stroke-width="2" />
+  <polygon points="140,300 136,310 144,310" fill="#1565c0" />
+  
+  <line x1="650" y1="350" x2="620" y2="300" stroke="#1565c0" stroke-width="2" />
+  <polygon points="620,300 624,310 616,310" fill="#1565c0" />
+  
+  <line x1="650" y1="430" x2="620" y2="300" stroke="#1565c0" stroke-width="2" />
+  <polygon points="620,300 624,310 616,310" fill="#1565c0" />
+  
+  <!-- Creates connections -->
+  <line x1="325" y1="410" x2="170" y2="410" stroke="#2e7d32" stroke-width="2" stroke-dasharray="5,5" />
+  <polygon points="170,410 180,415 180,405" fill="#2e7d32" />
+  <text x="240" y="400" font-family="Arial" font-size="12" text-anchor="middle">creates</text>
+  
+  <line x1="325" y1="430" x2="170" y2="460" stroke="#2e7d32" stroke-width="2" stroke-dasharray="5,5" />
+  <polygon points="170,460 180,465 180,455" fill="#2e7d32" />
+  <text x="240" y="450" font-family="Arial" font-size="12" text-anchor="middle">creates</text>
+  
+  <line x1="495" y1="410" x2="590" y2="410" stroke="#2e7d32" stroke-width="2" stroke-dasharray="5,5" />
+  <polygon points="590,410 580,415 580,405" fill="#2e7d32" />
+  <text x="540" y="400" font-family="Arial" font-size="12" text-anchor="middle">creates</text>
+  
+  <line x1="495" y1="430" x2="590" y2="460" stroke="#2e7d32" stroke-width="2" stroke-dasharray="5,5" />
+  <polygon points="590,460 580,465 580,455" fill="#2e7d32" />
+  <text x="540" y="450" font-family="Arial" font-size="12" text-anchor="middle">creates</text>
+  
+  <!-- Legend -->
+  <rect x="50" y="530" width="20" height="20" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" />
+  <text x="80" y="545" font-family="Arial" font-size="14" text-anchor="start">Abstract Products</text>
+  
+  <rect x="220" y="530" width="20" height="20" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2" />
+  <text x="250" y="545" font-family="Arial" font-size="14" text-anchor="start">Abstract Factory</text>
+  
+  <rect x="390" y="530" width="20" height="20" fill="#c8e6c9" stroke="#2e7d32" stroke-width="2" />
+  <text x="420" y="545" font-family="Arial" font-size="14" text-anchor="start">Concrete Factories</text>
+  
+  <rect x="560" y="530" width="20" height="20" fill="#bbdefb" stroke="#1565c0" stroke-width="2" />
+  <text x="590" y="545" font-family="Arial" font-size="14" text-anchor="start">Concrete Products</text>
+  
+  <rect x="50" y="560" width="20" height="20" fill="#fff3e0" stroke="#e65100" stroke-width="2" />
+  <text x="80" y="575" font-family="Arial" font-size="14" text-anchor="start">Client</text>
+</svg>
