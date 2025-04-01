@@ -7,6 +7,7 @@ import com.example.app.factory.LightThemeFactory;
 import com.example.app.factory.TerminalThemeFactory;
 
 public class AbstractFactoryDemo {
+
     public static void main(String[] args) {
         // Create app with light theme
         Application lightApp = new Application(new LightThemeFactory());
